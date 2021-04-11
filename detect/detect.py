@@ -2,11 +2,13 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-net = cv2.dnn.readNetFromDarknet("../../Downloads/yolov3.cfg", "yolov3_2000.weights")
+net = cv2.dnn.readNetFromDarknet("yolov3.cfg", "yolov3_2000.weights")
 
 classes = ['mask','unmask','poor']
 
 cap = cv2.VideoCapture('task_video.mp4')
+
+ikl = 0
 
 while 1:
     _, img = cap.read()
@@ -77,11 +79,8 @@ while 1:
             confidence = str(round(confidences[i],2))
             color = colors[i]
             cv2.rectangle(img,(x,y),(x+w,y+h),color,2)
-            cv2.putText(img,label + " " + confidence, (x,y+400),font,2,color,2)
-
-    cv2.imshow('img',img)
-    if cv2.waitKey(1) == ord('q'):
-        break
+            cv2.putText(img,label + " " + confidence, (x,y+4),font,2,color,2)
     
-cap.release()
-cv2.destroyAllWindows()
+    filename = 'image/'+'image'+str(ikl)+'.jpg'
+    cv2.imwrite(filename, img)
+    ikl+=1
