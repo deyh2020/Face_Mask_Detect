@@ -1,7 +1,7 @@
 #__Face Mask Detection with darknet YOLOv3 and NMS(non-max suppression)__
 
-[x]  Downloaded dataset from Kaggle-[dataset](https://www.kaggle.com/ivandanilovich/medical-masks-dataset-images-tfrecords)
-[x]  And then extracted that in my local ubuntu system
-[x]  I have written a program to convert label file a YOLO format from XML format [convert.py](https://github.com/perses08/Face_Mask_Detect/blob/main/preprocessing/convert.py)
-[x]   
+- [x]  Downloaded dataset from Kaggle-[dataset](https://www.kaggle.com/ivandanilovich/medical-masks-dataset-images-tfrecords)
+- [x]  And then extracted that in my local ubuntu system
+- [x]  I have written a program to convert label file a YOLO format from XML format [convert.py](https://github.com/perses08/Face_Mask_Detect/blob/main/preprocessing/convert.py)
+- [x]   
 
